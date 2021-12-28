@@ -88,13 +88,13 @@ def run_sanitization(working_path):
 					print("Test run, not renaming " + game + " to " + new_name + game_ext)
 				else:
 					os.rename(games_path + DIRECTORY_DELIMITER + game, games_path + DIRECTORY_DELIMITER + new_name + game_ext)
-					print("Created file " + new_name + game_ext)
+					print("Created game file " + new_name)
 				if game_name in valid_spoilers_list:
 					if TEST:
 						print("Test run, not renaming " + game_name + SPOILERS_EXT + " to " + new_name + SPOILERS_EXT)
 					else:
 						os.rename(spoilers_path + DIRECTORY_DELIMITER + game_name + SPOILERS_EXT, spoilers_path + DIRECTORY_DELIMITER + new_name + SPOILERS_EXT)
-						print("Created file " + new_name + SPOILERS_EXT)
+						print("Created spoiler file " + new_name + SPOILERS_EXT)
 			return True
 		elif response == "N\n":
 			return False
